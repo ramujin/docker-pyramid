@@ -1,0 +1,13 @@
+body {
+  font-size: 2rem;
+  font-family: Verdana;
+  padding: 1rem;
+}
+
+p {
+  font-weight: bold;
+}
+
+.fancy {
+  text-decoration: underline;
+}

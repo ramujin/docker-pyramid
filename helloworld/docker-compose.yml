@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  web-server:
+    build: # Dockerfile path relative to this file
+      context: .
+    ports: # Map ports on host (computer) to ports in container
+      - 6543:6543 # host : container
+    volumes: # Map hard drive from host (computer) to drive in container
+      - ./src:/app
