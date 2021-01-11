@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>ECE 140A Demo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="hello.css">
-  </head>
-  <body>
-    <p> Hello, ECE 140A! </p>
-    <div class='fancy'> How are you doing? </div>
-  </body>
-</html>
+{% extends "template.html" %}
+
+  {% block content %}
+    <!-- the message variable dynamically is defined by the web server -->
+    <p> {{message}} ECE 140A! </p>
+
+    <div class='fancy'>
+      How are you doing?
+    </div>
+  {% endblock %}
