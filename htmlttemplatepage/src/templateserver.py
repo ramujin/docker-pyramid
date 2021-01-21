@@ -2,8 +2,11 @@ from wsgiref.simple_server import make_server
 from pyramid.config import Configurator
 from pyramid.renderers import render_to_response # instead of FileResponse, we now render the template into a response!
 
+messages = ["Hi", "Hello", "Yo!"]
+
 def hello_world_template(req):
-  data = {'message': 'Greetings!'}
+  msg_id = int(req.matchdict['message'])
+  data = {'message': messages[msg_id]}
   return render_to_response('hello.html', data, request=req)
 
 if __name__ == '__main__':
@@ -12,7 +15,7 @@ if __name__ == '__main__':
     config.include('pyramid_jinja2')
     config.add_jinja2_renderer('.html')
 
-    config.add_route('template_hello', '/')
+    config.add_route('template_hello', '/{message}')
     config.add_view(hello_world_template, route_name='template_hello')
 
     config.add_static_view(name='/', path='./public', cache_max_age=3600)

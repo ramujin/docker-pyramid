@@ -12,6 +12,10 @@ This server returns an HTML response (with associated CSS)
 
 This server returns an HTML response that is templatized (more power!!!)
 
+## Rest with JS
+
+This server combines the principles of REST to make resource requests to the server!
+
 ## Usage
 
 1. Install Docker Desktop (<https://docs.docker.com/engine/install/>)

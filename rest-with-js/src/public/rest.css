@@ -1,0 +1,37 @@
+body {
+  padding:5vmin;
+  background: HSLA(0, 0%, 15%, 1.00);
+  color:#eee;
+  font-family:sans-serif;
+}
+menuitem {
+  padding:.5rem;
+  margin-right:5px;
+  padding:.6rem 1rem;
+  background:HSLA(0, 55%, 51%, 1.00);
+  color:#eee;
+}
+
+menuitem:hover {
+  background:#777;
+  color:white;
+  cursor:pointer;
+}
+
+.madlibs {
+  border-top:1px solid HSLA(0, 55%, 51%, 1.00);
+  margin-top:2rem;
+}
+
+.madlib {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  padding:1rem;
+  border-bottom:1px solid HSLA(0, 55%, 51%, 1.00);
+}
+
+span.key {
+  display:inline-block;
+  width:100px;
+  text-align:right;
+}
