@@ -7,10 +7,11 @@ ENV PYTHONUNBUFFERED 1
 # Define/create a working directory for the RUN/CMD/COPY commands
 WORKDIR /app
 
-# Copy the contents of the "src" folder to the container
-COPY ./src .
+# Copy the requirements for pip into the container
+COPY ./src/requirements.txt /app/requirements.txt
 
 # Install the required dependencies
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Tell Docker to listen to traffic on this port inside the container
